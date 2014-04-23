@@ -1,4 +1,4 @@
-composer
-/tmp/
-/nbproject/
-/vendor/
+./nbproject/
+./tmp/
+./vendor/
+./composer
