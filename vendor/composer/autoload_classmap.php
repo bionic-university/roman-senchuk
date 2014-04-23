@@ -6,4 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CommonTest' => $vendorDir . '/danielstjules/stringy/tests/CommonTest.php',
+    'StaticStringyTestCase' => $vendorDir . '/danielstjules/stringy/tests/StaticStringyTest.php',
+    'StringyTestCase' => $vendorDir . '/danielstjules/stringy/tests/StringyTest.php',
 );
