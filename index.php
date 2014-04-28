@@ -1,11 +1,30 @@
 <?php
 
+/*
+ * What to use?
+ */
 
+// Composer?
 require './vendor/autoload.php';
 
+// Symfony
+use Symfony\Component\ClassLoader\ClassLoader as ClassLoader;
+$loader = new ClassLoader();
+$loader ->getUseIncludePath(true);
+$loader ->register();
 
-use Stringy\Stringy as S;
+// OR Both?
 
-$stringy = S::create('Fòô creazy opt mein Fuhrer', 'UTF-8');
-echo count($stringy);  
+
+
+
+
+
+
+
+
+$stringy = Stringy\Stringy::create('Fòô creaky opt main Fuhrer', 'UTF-8');
+
+echo count($stringy);
 echo PHP_EOL;
+
