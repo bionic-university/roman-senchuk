@@ -8,6 +8,7 @@
         }
     ],
     "require": {
-            "danielstjules/stringy": ">=1.5.1"
+        "danielstjules/stringy": ">=1.5.1",
+        "symfony/class-loader": "dev-master"
     }
 }

@@ -2,7 +2,7 @@
 
 
 
-namespace house;
+namespace House;
 
 /**
  * Window class

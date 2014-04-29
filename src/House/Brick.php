@@ -1,12 +1,13 @@
 <?php
 
 
-namespace house;
+namespace House;
 
 /**
  * Description of Brick
  *
  * @author rsenchuk
+ *
  */
 
 

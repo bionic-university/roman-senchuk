@@ -1,10 +1,8 @@
 <?php
 
-namespace house;
+namespace House;
 
 
-use house\Window;
-use house\Brick;
 /**
  * Wall cosist of bricks 
  * and can have a window
@@ -26,7 +24,7 @@ class Wall {
      */
     private $bricks;
             
-    function __construct($height, $width, house\Window $window = null) {
+    function __construct($height, $width, Window $window = null) {
         $this->bricks = new \ArrayObject();
         
         $this->height = $height;
@@ -36,15 +34,15 @@ class Wall {
     }
     
     function countBricks(){
-        $windowSquare = 0.0;
+
+        $windowSquare = 0;
         $bricksSquare = 0.0;
         
-        if($this->window){
-           $windowSquare = $this->window.getHeight() * $this->window.getWidth();
+        if($this->window) {
+            $windowSquare = $this->window->getHeight() * $this->window->getWidth();
         }
-        
         $bricksSquare = $this->height * $this->width - $windowSquare;
-        build($bricksSquare);
+        $this->build($bricksSquare);
     }
     function build($bricksSquare = null){
         $widthToBuild = $this->width;
@@ -54,9 +52,9 @@ class Wall {
             while($widthToBuild < 0){
                 $brick = new Brick();
                 $this->bricks->append($brick);
-                $widthToBuild -= $brick.getWidth();
+                $widthToBuild -= $brick->getWidth();
             }
-            $heightToBuild-= $brick.getHeight();
+            $heightToBuild-= $brick->getHeight();
         }
         if($bricksSquare){
             echo 'we have some extra bricks';

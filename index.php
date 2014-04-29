@@ -5,19 +5,19 @@
  */
 
 // Composer?
-require './vendor/autoload.php';
-$loader->add('house\\', __DIR__.'/house/');
 
-// Symfony classLoader?
+$loader = require 'vendor/autoload.php';
+$loader->add( 'House', __DIR__.'/src/' );
+/* Symfony classLoader?
 use Symfony\Component\ClassLoader\ClassLoader as ClassLoader;
 $loader = new ClassLoader();
 $loader ->getUseIncludePath(true);
 $loader ->register();
 
 // OR Both?
+*/
 
-
-var_dump(new house\House());
+var_dump(new \House\House());
 
 
 

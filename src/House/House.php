@@ -1,7 +1,7 @@
 <?php
 
 
-namespace house;
+namespace House;
 
 /**
  * Description of House
@@ -15,7 +15,7 @@ class House {
     
     function __construct() {
                     
-        addWalls();
+        $this->addWalls();
     }
     
     function addWalls(){
