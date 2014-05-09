@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\ClassLoader\\' => array($vendorDir . '/symfony/class-loader'),
-    'House' => array($baseDir . '/House'),
 );

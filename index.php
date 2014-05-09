@@ -7,25 +7,22 @@
 // Composer?
 
 $loader = require 'vendor/autoload.php';
-$loader->add( 'House', __DIR__.'/src/' );
+$loader->add( 'Cook', __DIR__.'/src/' );
+
+
 /* Symfony classLoader?
 use Symfony\Component\ClassLoader\ClassLoader as ClassLoader;
 $loader = new ClassLoader();
 $loader ->getUseIncludePath(true);
 $loader ->register();
 
-// OR Both?
+
 */
 
-var_dump(new \House\House());
+var_dump(new \Cook\Cook());
 
 
 
 
-
-
-/*$stringy = Stringy\Stringy::create('Fòô creaky opt main Fuhrer', 'UTF-8');
-
-echo count($stringy);*/
 echo PHP_EOL;
 
