@@ -12,6 +12,7 @@ namespace Cook {
 
         function __construct(){
             $this->setName('Cabbage');
+            parent::__construct();
         }
 
         use TraitCut;

@@ -8,7 +8,8 @@
 namespace Cook;
 
 
-interface ICut {
+interface ICut
+{
 
     public function cut();
 

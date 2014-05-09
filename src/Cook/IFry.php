@@ -8,7 +8,8 @@
 namespace Cook;
 
 
-interface IFry {
+interface IFry
+{
 
     public function fry();
 

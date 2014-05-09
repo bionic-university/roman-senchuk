@@ -8,8 +8,10 @@
 namespace Cook;
 
 
-trait TraitFry {
-    public function fry(){
-        echo $this->getName() . " got fried";
+trait TraitFry
+{
+    public function fry()
+    {
+        echo $this->getName() . " got fried".PHP_EOL;;
     }
 } 

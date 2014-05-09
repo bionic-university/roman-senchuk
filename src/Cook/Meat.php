@@ -8,15 +8,15 @@
 namespace Cook;
 
 
-class Apple extends AbstractFood implements ICut
+class Meat extends AbstractFood implements IFry
 {
 
     function __construct()
     {
-        $this->setName('Apple');
+        $this->setName('Meat');
         parent::__construct();
     }
 
-    use TraitCut;
+    use TraitFry;
 
 }

@@ -10,7 +10,7 @@ namespace Cook {
 
     trait TraitCut {
         public function cut(){
-            echo $this->getName() . " got cut";
+            echo $this->getName() . " got cut".PHP_EOL;;
         }
     }
 }
