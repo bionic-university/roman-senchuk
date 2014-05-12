@@ -9,6 +9,7 @@
     ],
     "require": {
         "danielstjules/stringy": ">=1.5.1",
-        "symfony/class-loader": "dev-master"
+        "phpunit/phpunit":"4.0.*",
+        "symfony/class-loader":"dev-master"
     }
 }
