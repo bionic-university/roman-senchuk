@@ -4,9 +4,9 @@
 // Composer load
 
 $loader = require 'vendor/autoload.php';
-$loader->add( 'Cook', __DIR__.'/src/' );
+$loader->add( 'BionicUniversity', __DIR__.'/src/' );
 
-new \Cook\Cook();
+new \BionicUniversity\RomanSenchuk\Cook\Cook();
 
 
 
