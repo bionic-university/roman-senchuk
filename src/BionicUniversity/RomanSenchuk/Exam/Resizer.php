@@ -11,6 +11,9 @@ namespace BionicUniversity\RomanSenchuk\Exam;
 
 class Resizer extends AbstractResizer {
 
+    /*
+     * @var BionicUniversity\RomanSenchuk\Exam\ImageInterface
+     */
     private $pict;
 
     const THUMB_WIDTH = 100;
