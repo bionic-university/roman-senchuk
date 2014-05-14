@@ -9,7 +9,8 @@
 namespace BionicUniversity\RomanSenchuk\Exam;
 
 
-abstract class AbstractResizer {
+abstract class AbstractResizer
+{
 
     abstract public function thumbnail();
 } 
