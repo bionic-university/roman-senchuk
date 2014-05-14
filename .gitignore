@@ -3,3 +3,4 @@
 /composer
 phpunit
 .idea
+composer.lock
