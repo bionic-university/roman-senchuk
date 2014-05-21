@@ -1,6 +1,7 @@
 /nbproject/*
 /vendor/*
-/composer
+composer
 phpunit
 .idea
 composer.lock
+autoload.php
