@@ -1,7 +1,15 @@
 /nbproject/*
+.netbeans
+.DS_Store
+desktop.ini
+.idea
+app/cache
+app/logs
+app/build
 /vendor/*
+coverage
+cache.properties
 composer
 phpunit
-.idea
 composer.lock
-autoload.php
+
