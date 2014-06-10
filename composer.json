@@ -9,7 +9,8 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.5.*",
-
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
@@ -17,8 +18,8 @@
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
-	
-	"phpunit/phpunit": "~4.0",
+
+        "phpunit/phpunit": "~4.0",
         "phpunit/php-invoker": "~1.1",
         "phpunit/dbunit": "~1.2",
         "phploc/phploc": "~2.0",
