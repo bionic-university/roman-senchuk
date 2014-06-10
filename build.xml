@@ -130,4 +130,12 @@
         </exec>
     </target>
 
+    <target name="clover.report">
+        <clover-html-report outdir="clover_html" title="Clover Demo"/>
+
+        <clover-report>
+            <current outfile="clover.xml"/>
+        </clover-report>
+    </target>
+
 </project>
