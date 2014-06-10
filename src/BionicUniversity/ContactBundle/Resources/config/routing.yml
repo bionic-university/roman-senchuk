@@ -1,3 +1,3 @@
 bionic_university_contact_homepage:
-    pattern:  /hello/{name}
+    pattern:  /contactus
     defaults: { _controller: BionicUniversityContactBundle:Default:index }
