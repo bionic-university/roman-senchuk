@@ -130,12 +130,11 @@
         </exec>
     </target>
 
-    <target name="phpunit" description="Running tests and coverage analysis">
-        <exec command="phpunit
-            --logjunit ${buildir}/logs/phpunit.xml
-            --coverage-clover ${builddir}/logs/coverage/clover.xml
-            --coverage-html ${builddir}/logs/coverage/ ${ws}/tests"
-                />
+    <target name="clover.report">
+        <clover-html-report outdir="clover_html" title="Clover Demo"/>
+        <clover-report>
+            <current outfile="clover.xml"/>
+        </clover-report>
     </target>
 
 </project>
