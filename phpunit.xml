@@ -5,6 +5,7 @@
     backupGlobals               = "false"
     backupStaticAttributes      = "false"
     colors                      = "true"
+    codecoverage                = "true"
     convertErrorsToExceptions   = "true"
     convertNoticesToExceptions  = "true"
     convertWarningsToExceptions = "true"

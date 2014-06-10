@@ -12,6 +12,6 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/contactus');
 
-        $this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+        $this->assertTrue($crawler->filter('html:contains("Crazy Form")')->count() > 0);
     }
 }
