@@ -11,6 +11,6 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $form = $this->createForm(new ContactType());
-        return $this->render('BionicUniversityContactBundle:Default:index.html.twig');
+        return array('form' => $form->createView());
     }
 }
