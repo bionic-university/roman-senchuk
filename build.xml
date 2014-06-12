@@ -6,8 +6,7 @@
     <property name="builddir" value="${workspace}/app/build"/>
 
     <target name="build"
-            depends="prepare"/>
-    <!-- ,vendors,lint,phploc,pdepend,phpcpd,phpmd-ci,phpcs-ci,phpunit-->
+            depends="prepare,vendors,lint,phploc,pdepend,phpcpd,phpmd-ci,phpcs-ci,phpunit"/>
 
     <target name="build-parallel" depends="prepare,lint,tools-parallel,phpunit"/>
 
@@ -128,13 +127,6 @@
         <exec executable="composer" failonerror="true">
             <arg value="update"/>
         </exec>
-    </target>
-
-    <target name="clover.report">
-        <clover-html-report outdir="clover_html" title="Clover Demo"/>
-        <clover-report>
-            <current outfile="clover.xml"/>
-        </clover-report>
     </target>
 
 </project>
