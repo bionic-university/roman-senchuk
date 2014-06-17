@@ -10,6 +10,6 @@
 /build/
 /vendor/
 /bin/
-!bin/console
-!bin/symfony_requirements
+!/bin/console
+!/bin/symfony_requirements
 /composer.phar
