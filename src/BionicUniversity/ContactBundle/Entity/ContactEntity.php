@@ -12,7 +12,7 @@ class ContactEntity {
     protected $name;
     protected $email;
     protected $subject;
-    protected $body;
+    protected $message;
 
     public function getName() {
         return $this->name;
@@ -30,8 +30,8 @@ class ContactEntity {
         $this->subject = $subject;
     }
 
-    public function setBody($body) {
-        $this->body = $body;
+    public function setMessage($message) {
+        $this->message = $message;
     }
 
     public function getEmail() {
@@ -42,8 +42,8 @@ class ContactEntity {
         return $this->subject;
     }
 
-    public function getBody() {
-        return $this->body;
+    public function getMessage() {
+        return $this->message;
     }
 
 }
