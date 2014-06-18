@@ -1,4 +1,9 @@
-Повідомлення від {{ name }}
-Надіслано з /contactus
+{% extends '::base.html.twig' %}
 
-{{ message|raw }}
+{% block title %}Contact{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Contact us</h1>
+    </header>
+{% endblock%}

@@ -10,7 +10,6 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $form = $this->createForm(new ContactType());
-        return array('form' => $form->createView());
+        return $this->render('BionicUniversityContactBundle:Mail:contact.html.twig');
     }
 }
