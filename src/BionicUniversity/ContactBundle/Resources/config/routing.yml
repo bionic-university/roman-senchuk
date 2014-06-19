@@ -1,5 +1,3 @@
 bionic_contactus:
     pattern:  /contactus
     defaults: { _controller: BionicUniversityContactBundle:Default:index }
-    requirements:
-        _method: GET

@@ -1,12 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block title %}Contact{% endblock%}
-
+{% block stylesheets %}
+    <link href="{{ asset('bundles/bionicuniversitycontact/css/frm.css') }}" 
+          type="text/css" rel="stylesheet" />
+{% endblock %}
 {% block body %}
     <header>
         <h1>Contact us</h1>
     </header>
-    <form action="{{ path('bionic_contactus') }}" method="post" {{ form_enctype(form) }} class="blogger">
+     {{ app.session.flash('contactus-notice') }}
+    <form action="{{ path('bionic_contactus') }}" method="post" class="contact">
         {{ form_errors(form) }}
 
         {{ form_row(form.name) }}
@@ -19,3 +23,4 @@
         <input type="submit" value="Submit" />
     </form>
 {% endblock%}
+

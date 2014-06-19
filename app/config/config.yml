@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resourse: @BionicUniversityContactBundle/Resources/config/config.yml }
 
 framework:
     #esi:             ~
@@ -62,7 +63,7 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport:  smtp
+    transport:  gmail
     encryption: ssl
     auth_mode:  login
     host:       smtp.gmail.com
