@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resourse: @BionicUniversityContactBundle/Resources/config/config.yml }
+   
 
 framework:
     #esi:             ~
@@ -61,13 +61,14 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
-# Swiftmailer Configuration
 swiftmailer:
-    transport:  gmail
-    encryption: ssl
-    auth_mode:  login
-    host:       smtp.gmail.com
-    username:   frspm.roman@gmail.com
-    password:   2011dick@dorkT
-    spool:      { type: memory }
-    delivery_address: curze@mail.ru
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+
+# parameters for BionicUniversity ContactBundle
+parameters:
+    emails.contact_email: curze@mail.ru

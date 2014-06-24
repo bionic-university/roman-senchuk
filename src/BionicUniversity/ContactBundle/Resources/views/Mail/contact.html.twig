@@ -8,8 +8,16 @@
 {% block body %}
     <header>
         <h1>Contact us</h1>
+             
     </header>
-     {{ app.session.flash('contactus-notice') }}
+{#  flash message output  #}    
+   {% for flashMessage in app.session.flashbag.get('bionic_contactus') %}
+        <p class="contactus-notice">
+        {{ flashMessage }}
+        </p>
+   {% endfor %}
+
+      
     <form action="{{ path('bionic_contactus') }}" method="post" class="contact">
         {{ form_errors(form) }}
 

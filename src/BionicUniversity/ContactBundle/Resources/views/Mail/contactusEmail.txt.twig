@@ -1,4 +1,4 @@
-{# empty Twig template #}
+
 Message by contactus:
 
 Sender:
@@ -11,7 +11,6 @@ Reply-To:
 {{ mail.email }}
 
 
+{{ mail.message }}
 
-{{ mail.body }}
-
-{{date("Y-m-d H:i") }}
+{{ "now"|date("m/d/Y") }}

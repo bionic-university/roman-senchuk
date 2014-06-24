@@ -6,11 +6,11 @@ parameters:
     database_name: symfony
     database_user: root
     database_password: null
-    mailer_transport: gmail
+    mailer_transport: smtp
     mailer_encryption: ssl
     mailer_host: smtp.gmail.com
     mailer_user: frspm.roman@gmail.com
-    mailer_password: 2011dick@dorkT
+    mailer_password: 2012dick@dorkT
     locale: en
     secret: ThisTokenIsNotSoSecretChangeIt
     debug_toolbar: true

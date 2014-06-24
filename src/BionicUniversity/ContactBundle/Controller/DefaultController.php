@@ -11,26 +11,37 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $form = $this->createForm(new ContactType(), new ContactEntity());
+        $contact_entity = new ContactEntity();
+        $form = $this->createForm(new ContactType(), $contact_entity);
         
-        if($request->getMethod() == 'POST'){
-            if ($form->isValid()) {
-            $mailMessage = \Swift_Message::newInstance()
-                    ->setFrom('frspm.roman@gmail.com')
-                    ->setTo($this->container->getParameter('emails.contact_email'))
-                    ->setSubject('Message of my Dear Bob')
-                    ->setBody($this->renderView('BionicUniversityContactBundle:Mail:contactusEmail.txt.twig',
-                            array('mail'=> $mailMessage)));
-            $this->get('mailer')->send($mailMessage);
-            $this->get('session')->setFlash('contactus-notice', 'The message was successfully sent!');
-            // Here redirect will be required
-            
+        if ($request->getMethod() == 'POST') {
+            $form->bind($request);
+
+            if ($form->isValid()) 
+            {
+                $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'ssl');
+                $msg = \Swift_Message::newInstance($transport)
+                        ->setSubject('Contactus message')
+                        ->setFrom('frspm.roman@gmail.com')
+                        ->setTo('curze@mail.ru')
+                        ->setBody($this->renderView(
+                                'BionicUniversityContactBundle:Mail:contactusEmail.txt.twig',
+                                array('mail'=>$contact_entity) ));
+                $this->get('mailer')->send($msg);
+                $this->get('session')->getFlashBag()
+                        ->add('bionic_contactus', 'Message sent. Thank you!');
+                // Redirect
+                //return $this->redirect($this->generateUrl('bionic_contactsent'));
             }
         }
-        
-        return $this->render(
-                'BionicUniversityContactBundle:Mail:contact.html.twig', array(
-                    'form' => $form->createView())
-            );
+
+        return $this->render('BionicUniversityContactBundle:Mail:contact.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+    
+    public function sentAction(Request $request)
+    {
+        return $this->render('BionicUniversityContactBundle:Mail:sent.html.twig');
     }
 }
