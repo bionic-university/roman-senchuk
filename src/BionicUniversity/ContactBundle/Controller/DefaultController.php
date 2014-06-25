@@ -19,11 +19,11 @@ class DefaultController extends Controller
 
             if ($form->isValid()) 
             {
-                $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 587, 'ssl');
+                $transport = \Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl');
                 $msg = \Swift_Message::newInstance($transport)
                         ->setSubject('Contactus message')
                         ->setFrom('frspm.roman@gmail.com')
-                        ->setTo('curze@mail.ru')
+                        ->setTo($this->container->getParameter('emails.contact_email'))
                         ->setBody($this->renderView(
                                 'BionicUniversityContactBundle:Mail:contactusEmail.txt.twig',
                                 array('mail'=>$contact_entity) ));
@@ -31,7 +31,7 @@ class DefaultController extends Controller
                 $this->get('session')->getFlashBag()
                         ->add('bionic_contactus', 'Message sent. Thank you!');
                 // Redirect
-                //return $this->redirect($this->generateUrl('bionic_contactsent'));
+                return $this->redirect($this->generateUrl('bionic_contactsent'));
             }
         }
 
