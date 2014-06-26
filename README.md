@@ -15,3 +15,5 @@ What's done?
 
 On the Symfony Standard Edition 2.5 is setup swiftmail component and form 
 for getting messages from user.
+
+Can be tested at http://212.53.144.201/
